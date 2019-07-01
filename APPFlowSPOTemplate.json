@@ -1,0 +1,80 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Upload a Photo to SharePoint",
+    "version": "1.0.0",
+    "title": "ImageFlowSPO"
+  },
+  "host": "prod-49.westeurope.logic.azure.com",
+  "basePath": "/workflows",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/f88fbg9900c34dd58abdc58b7be589f6/triggers/manual/paths/invoke": {
+      "post": {
+        "summary": "Upload a Photo to SharePoint",
+        "description": "Upload a Photo to SharePoint",
+        "operationId": "UploadPhoto",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "default": "2016-06-01",
+            "required": true,
+            "x-ms-visibility": "internal",
+            "type": "string"
+          },
+          {
+            "name": "sp",
+            "in": "query",
+            "default": "/triggers/manual/run",
+            "required": true,
+            "x-ms-visibility": "internal",
+            "type": "string"
+          },
+          {
+            "name": "sv",
+            "in": "query",
+            "default": "1.0",
+            "required": true,
+            "x-ms-visibility": "internal",
+            "type": "string"
+          },
+          {
+            "name": "sig",
+            "in": "query",
+            "default": "fAq1xXzHOl1spJnjt7dBlUezmk8uoAXq2X_fvUXlGqE",
+            "required": true,
+            "x-ms-visibility": "internal",
+            "type": "string"
+          },
+          {
+            "name": "File",
+            "in": "formData",
+            "description": "file to upload",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
+
